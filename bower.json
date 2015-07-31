@@ -1,0 +1,21 @@
+{
+  "name": "glgcomics",
+  "version": "1.0.0",
+  "homepage": "https://github.com/glgcomics/glgcomics.github.io",
+  "authors": [
+    "erikathea <ethajes@gmail.com>"
+  ],
+  "description": "glgcomics site",
+  "main": "index.html",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
