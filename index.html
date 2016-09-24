@@ -76,13 +76,11 @@ layout: home
         <div class="hard"> Testing </div>
         <div class="hard"></div>
 
-        {% for post in site.posts %}
+        {% for post in site.freehand %}
           <div>
+            <h3>{{ post.title }}</h3>
             <p>
-
-
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-              <iframe src="{{ post.url | prepend: site.baseurl }}"></iframe>
+              {{ post.content }}
             </p>
 
           </div>
