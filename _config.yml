@@ -11,8 +11,8 @@ collections:
   uploads:
     title: Uploads
     output: true
-description: 'The Graphic Literature Guild is a student organization for Artists,
-  Writers, and Comic enthusiasts based in University of The Philippines - Los Baños.'
+description: The Graphic Literature Guild is a student organization for Artists, Writers,
+  and Comic enthusiasts based in University of The Philippines - Los Baños.
 baseurl: 
 url: http://glgcomics.org
 twitter_username: glgcomics
