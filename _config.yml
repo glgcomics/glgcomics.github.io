@@ -1,29 +1,37 @@
+---
 title: The Graphic Literature Guild
-description: > # this means to ignore newlines until "baseurl:"
-  The Graphic Literature Guild is a student organization for Artists, Writers, and Comic enthusiasts based in University of The Philippines - Los Baños.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: http://glgcomics.org # need to update this to https
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+description: 'The Graphic Literature Guild is a student organization for Artists,
+  Writers, and Comic enthusiasts based in University of The Philippines - Los Baños.
+
+'
+baseurl: ''
+url: http://glgcomics.org
 twitter_username: glgcomics
 twitter:
   username: glgcomics
-github_username:  glgcomics
+github_username: glgcomics
 facebook_username: glgcomics
 facebook:
   publisher: glgcomics
 instagram_username: glgcomics
-
-# Build settings
 markdown: kramdown
 theme: minima
 kramdown:
   input: GFM
   hard_wrap: false
 gems:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
-  - jemoji
-
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-feed
+- jemoji
 permalink: "/blog/:title/"
 paginate: 5
 paginate_path: "/blog/:num/"

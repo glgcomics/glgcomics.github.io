@@ -1,9 +1,12 @@
 ---
+title: Welcome Post!
+date: 2016-09-21 16:28:50 Z
+categories:
+- jekyll
+- update
 layout: post
-title:  "Welcome Post!"
-date:   2016-09-22 00:28:50 +0800
-categories: jekyll update
 ---
+
 Testing post
 
 <a href="https://www.facebook.com/glgcomics/photos/a.131164193595196.24334.130214787023470/1278961115482159/?type=3&theater">embed</a>
