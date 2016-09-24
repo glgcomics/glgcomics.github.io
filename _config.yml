@@ -1,6 +1,6 @@
 ---
 title: The Graphic Literature Guild
-timezone: UTC
+timezone: Asia/Singapore
 collections:
   posts:
     title: Posts
@@ -12,7 +12,7 @@ description: 'The Graphic Literature Guild is a student organization for Artists
   Writers, and Comic enthusiasts based in University of The Philippines - Los Baños.
 
 '
-baseurl: ''
+baseurl: 
 url: http://glgcomics.org
 twitter_username: glgcomics
 twitter:
