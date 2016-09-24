@@ -2,6 +2,9 @@
 title: The Graphic Literature Guild
 timezone: Asia/Singapore
 collections:
+  freehand:
+    title: Freehand
+    output: true
   posts:
     title: Posts
     output: true
