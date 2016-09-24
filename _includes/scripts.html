@@ -1,0 +1,17 @@
+  <script src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+  <script src="http://cdn.embed.ly/jquery.embedly-3.1.2.min.js" type="text/javascript"></script>
+  <script>
+    // <!-- embedly -->
+    (function(w, d){ var id='embedly-platform',n='script'; if (!d.getElementById(id)){ w.embedly = w.embedly || function() {(w.embedly.q = w.embedly.q || []).push(arguments);}; var e = d.createElement(n); e.id = id; e.async=1; e.src = ('https:' === document.location.protocol ? 'https' : 'http') + '://cdn.embedly.com/widgets/platform.js'; var s = d.getElementsByTagName(n)[0]; s.parentNode.insertBefore(e, s); } })(window, document);
+
+    $.embedly.defaults.key = 'c373fbd7b68a4db3b83c7660a13c2df6';
+    $('.page-content p a').embedly({ query: {maxwidth:530} })
+    //$('.page-content p a').addClass("embedly-card");
+    //$('.page-content p.source a').removeClass("embedly-card");
+
+    // bootstrap ie10 support
+    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement('style');
+        msViewportStyle.appendChild( document.createTextNode( '@-ms-viewport{width:auto!important}' ) ); document.querySelector('head').appendChild(msViewportStyle) }
+  </script>

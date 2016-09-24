@@ -1,23 +1,113 @@
 ---
-layout: default
+layout: home
 ---
+<!-- BANNER -->
+<div class="header container-fluid">
+  <div class="row">
+    <div class="logo col-sm-2 text-center invert-colors">
+      <a href="{{site.url}}">
+        <img src="/images/glg-black-logo-smaller.jpg" alt="{{ site.title }}" class="img-responsive center"/>
+      </a>
+    </div>
 
-<div class="home">
+    <div class="col-sm-10"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2 center text-center invert-colors">
+      <hr>
+      <h3> Celebrating </h3>
+      <h3> Graphic Literature </h3>
+      <h3> Since 2009. </h3>
+      <img src="/images/glg-black-banner-smaller.jpg" alt="{{ site.title }}" class="img-responsive"/>
 
-  <h1 class="page-heading">Posts</h1>
+      <div class="logo row text-center">
+        <a href="https://facebook.com/glgcomics"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> |
+        <a href="https://twitter.com/glgcomics"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> |
+        <a href="http://depot.glgcomics.org/"><i class="fa fa-tumblr-square" aria-hidden="true"></i></a> |
+        <a href="http://instagram.glgcomics.org/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <p>glgcomics</p>
+      </div>
+    </div>
+    <div class="text col-sm-10 description">
+      <h3><a href="{{site.url}}">The Graphic Literature Guild (GLG)</a> is a student organization based in the University of the Philippines Los Baños that aims to provide training and experience to its members as well as actively advocate the appreciation and use of the wondrous medium that is graphic literature.</h3>
+    </div>
+  </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+</div>
 
-        <h2>
+<!-- END OF BANNER -->
+
+<!-- NAVBAR -->
+<div class="navbar container-fluid invert-colors">
+  <div class="row">
+  {% for page in site.pages %}
+      {% if page.title %}
+        <div class="col-md-1">
+          <h4><a href="{{ page.url | prepend: site.baseurl }}"> <i class="fa fa-terminal" aria-hidden="true"></i>{{ page.title }} </a></h4>
+        </div>
+      {% endif %}
+  {% endfor %}
+
+  <div class="col-md-1 rss-subscribe">
+    <h4><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fa fa-rss-square" aria-hidden="true"></i> RSS</a></h4>
+  </div>
+  </div>
+</div>
+<!-- END OF NAVBAR -->
+
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- FREEHAND -->
+    <div class="col-sm-9">
+      <div class="row">
+        <h2> Freehand </h2>
+        <p>
+          What is Freehand? [TODO: UPDATE THIS!] Official publication...
+        </p>
+      </div>
+
+      <div class="row">
+        {% include turn-navbar.html %}
+      </div>
+
+      <div class="home row" id="flipbook">
+        <div class="hard"> Testing </div>
+        <div class="hard"></div>
+
+        {% for post in site.posts %}
+          <div>
+            <p>
+
+
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+              <iframe src="{{ post.url | prepend: site.baseurl }}"></iframe>
+            </p>
+
+          </div>
+        {% endfor %}
+
+        <div class="hard"></div>
+        <div class="hard"> End </div>
+      </div>
+    </div>
+    <!-- END OF FREEHAND -->
+
+    <div class="col-sm-3 invert-colors">
+      <h3> Updates </h3>
+      {% for post in site.posts %}
+      <div>
+        <p>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+        </p>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+      </div>
+      {% endfor %}
 
+      <hr>
+      <div class="embed-responsive embed-responsive-4by3">
+      <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fglgcomics%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=322651504584414" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div>
+    </div>
+
+  </div>
 </div>

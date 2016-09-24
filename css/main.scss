@@ -4,6 +4,22 @@
 @charset "utf-8";
 
 // Our variables
+
+@font-face {
+  font-family: 'Bangers';
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/bangers/Bangers.ttf");
+}
+
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/oswald/Oswald-Regular.ttf");
+}
+
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
@@ -36,4 +52,31 @@ $on-laptop:        800px;
 // }
 
 // Import partials from the `minima` theme.
-@import "minima";
+//@import "minima";
+
+// bootstrap stuff
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+body {
+  font-family: "Oswald";
+  overflow: visible;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Bangers"
+}
+
+div.header {
+  background: url("{{ "/images/glg-page-banner-smaller.jpg" | prepend: site.baseurl}} ") white right;
+  div.description {
+    background-color: white;
+    opacity: 0.85;
+  }
+}
+
+div.invert-colors {
+  background: black;
+  h1, h2, h3, h4, h5, h6, p, i { color: white; }
+}
